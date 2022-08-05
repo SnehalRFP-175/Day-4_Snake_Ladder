@@ -28,6 +28,7 @@ public class Snake_Ladder
 	            }
 	            System.out.println("The number on the die is "+dice);
 	            // *****Exact Winning position 100*****
+	            
 	            if((playerIndex+dice)==100)
 	            {
 	            	System.out.println("Congratulations You won the Game.........!"); 
@@ -108,6 +109,7 @@ public class Snake_Ladder
 	                    	playerIndex = playerIndex - dice;
 	                    	System.out.println("Ooops...!Caught By the Snake.........!Your new position is---- "+playerIndex);
 	                    	break;
+	                    	
 	                    default : 	
 	                    	System.out.println("No Play..."+playerIndex);
 	                    break;
