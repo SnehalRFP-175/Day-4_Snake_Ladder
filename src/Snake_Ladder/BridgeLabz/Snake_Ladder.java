@@ -2,8 +2,8 @@ package Snake_Ladder.BridgeLabz;
 
 import java.util.Random;
 
-/*Added UC4
- * Repeat the condition till winning point 100*/
+/*Added UC5
+ * Ensure the Player Gets Exact Winning Position*/
 public class Snake_Ladder 
 {
 	    private static int playerIndex=0;
@@ -116,7 +116,13 @@ public class Snake_Ladder
 	               }
 	            }  
 	            	
-	           
+	          	/* If player position is > 100 then No play and stays at same position*/
+		       if (playerIndex>=100)
+		        { 
+		         		playerIndex-=dice;
+		         		System.out.println("************No Play************\n\n");
+		         		System.out.println("Stays at same Position---> "+playerIndex+".");
+		        } 
 	  }
 }
 	       
