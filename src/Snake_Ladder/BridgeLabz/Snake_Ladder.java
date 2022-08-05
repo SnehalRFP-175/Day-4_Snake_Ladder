@@ -27,6 +27,13 @@ public class Snake_Ladder
 	                dice++;  
 	            }
 	            System.out.println("The number on the die is "+dice);
+	            // *****Exact Winning position 100*****
+	            
+	            if((playerIndex+dice)==100)
+	            {
+	            	System.out.println("Congratulations You won the Game.........!"); 
+	            	break;
+	            }
 	            
 	  
 	            	if( (playerIndex+dice) != 100 )
@@ -102,16 +109,13 @@ public class Snake_Ladder
 	                    	playerIndex = playerIndex - dice;
 	                    	System.out.println("Ooops...!Caught By the Snake.........!Your new position is---- "+playerIndex);
 	                    	break;
+	                    	
 	                    default : 	
+	                    	System.out.println("No Play..."+playerIndex);
 	                    break;
 	               }
 	            }  
-	            	else if (playerIndex>=100)
-	        {
-	         	playerIndex-=dice;
-	         	System.out.println("************No Play************\n\n");
-	         	System.out.println("Stays at same Position---> "+playerIndex+".");
-	        }
+	            	
 	           
 	  }
 }
