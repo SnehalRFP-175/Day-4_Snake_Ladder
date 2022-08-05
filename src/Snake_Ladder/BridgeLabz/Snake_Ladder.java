@@ -2,12 +2,13 @@ package Snake_Ladder.BridgeLabz;
 
 import java.util.Random;
 
-/*Added UC5
- * Ensure the Player Gets Exact Winning Position*/
+/*Added UC6
+ * The Number of time dice was played to win the Game*/
 public class Snake_Ladder 
 {
 	    private static int playerIndex=0;
 	    private static int dice;  
+	    private static int count=1; 
 		void snakeGame() 
 	    {
 			
@@ -38,7 +39,7 @@ public class Snake_Ladder
 	  
 	            	if( (playerIndex+dice) != 100 )
 	            	{
-	            	
+	            	count++;
 	            	playerIndex += dice;
 	            	System.out.println("Player Position---> " +playerIndex+".");
 	            	
@@ -131,6 +132,10 @@ public class Snake_Ladder
 	        Snake_Ladder Player1=new Snake_Ladder(); 
 	        
 	        Player1.snakeGame(); 
+	        
+	        //Number of times dice was played
+	        System.out.println("The Number of time Dice was Played to win the Game is---->" +count);
+	         
 	        
 	      
 	     
